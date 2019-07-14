@@ -26,3 +26,5 @@ venv/
 ansible/py_env_ansible/
 .vscode/
 ansible/old/db/
+
+gce.ini
