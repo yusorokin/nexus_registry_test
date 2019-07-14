@@ -1,0 +1,10 @@
+---
+- name: Run sonatype/nexus3 by docker-compose
+  hosts: tag_registry
+  become: true
+
+  tasks:
+    - name: run container
+      docker_service:
+        state: present
+        project_src: /srv/nexus3/

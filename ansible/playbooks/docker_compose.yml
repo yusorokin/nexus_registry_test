@@ -1,0 +1,12 @@
+---
+- name: Install docker-compose
+  hosts: all
+  become: true
+
+  tasks:
+    - name: install docker-py package required by docker_container
+      pip:
+        name: "{{ item }}"
+      loop:
+        - docker
+        - docker-compose

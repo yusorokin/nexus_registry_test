@@ -1,0 +1,19 @@
+---
+- name: Prepare directories and files
+  hosts: tag_registry
+  become: true
+
+  tasks:
+    - name: create required directories
+      file:
+        path: "{{ item }}"
+        state: directory
+      loop:
+        - /srv/nexus3
+        - /srv/nexus3/nexus-data
+
+    - name: put compose-file
+      file:
+        src: "../files/sonatype_nexus3.yml"
+        path: "/srv/nexus3/docker-compose.yml"
+        state: file
