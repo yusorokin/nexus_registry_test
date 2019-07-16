@@ -12,8 +12,7 @@
         - /srv/nexus3
         - /srv/nexus3/nexus-data
 
-    - name: put compose-file
-      file:
+    - name: copy compose-file
+      copy:
         src: "../files/sonatype_nexus3.yml"
-        path: "/srv/nexus3/docker-compose.yml"
-        state: file
+        dest: "/srv/nexus3/docker-compose.yml"

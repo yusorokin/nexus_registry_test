@@ -3,4 +3,6 @@
 - import_playbook: docker.yml
 - import_playbook: pip.yml
 - import_playbook: prepare.yml
-- import_playbook: docker-compose.yml
+- import_playbook: docker_compose.yml
+- import_playbook: docker_settings.yml
+- import_playbook: run_registry.yml
