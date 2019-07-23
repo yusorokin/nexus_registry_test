@@ -1,0 +1,15 @@
+---
+
+- import_playbook: base.yml
+
+- name: Nexus
+  hosts: tag_registry
+  become: yes
+
+  vars:
+    nexus_admin_password: "123"
+    httpd_setup_enable: false
+
+  roles:
+    - geerlingguy.java
+    - ansible-thoteam.nexus3-oss

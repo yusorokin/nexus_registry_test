@@ -29,4 +29,7 @@ ansible/old/db/
 
 gce.ini
 
+# external ansible roles
 geerlingguy.docker/
+ansible-thoteam.nexus3-oss
+geerlingguy.java

@@ -1,1 +1,5 @@
 - src: geerlingguy.docker
+- src: ansible-thoteam.nexus3-oss
+  version: v2.4.3
+- src: geerlingguy.java
+  version: 1.9.5
